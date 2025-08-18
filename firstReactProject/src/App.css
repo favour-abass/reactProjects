@@ -1,0 +1,23 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+*{
+  background-color: white;
+  color: #333;
+}
+
+h1.footer{
+  text-align: start;
+}
+
+a{
+  padding: 20px;
+}
+
+p.hero-txt{
+  text-align: left;
+}
