@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+:root {
+  font-family: "Poppins", sans-serif;
+  color: rgb(33, 33, 33);
+}
+
+.dark-red{
+  background-color: #5D0C1D;
+}
+
+hr{
+  color: rgb(238, 238, 238) ;
+}
+
+nav{
+  background-color: transparent;
+}
+
+h1, h2{
+  color: rgb(47, 40, 30);
+}
+
+p{
+  color: rgb(84, 72, 55);
+}
