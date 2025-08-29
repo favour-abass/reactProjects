@@ -1,13 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "../assets/images/logo-large-bg.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     <>
-      <nav className="mx-2 sm:mx-12 flex items-center justify-between bg-transparent">
+      <nav className={`fixed px-10 top-0 left-0 w-full z-50 flex items-center justify-between bg-transparent ${
+        scrolled
+          ? "bg-white/30 backdrop-blur-xs"
+          : "bg-transparent"}`}>
         <div className="flex">
-          <img src={Logo} alt="Logo" className="logo" />
+          <img src={Logo} alt="Logo" className="logo sm:ms-3" />
         </div>
         <div className="justify-end hidden sm:block">
           <a className="me-3.5 hover:text-red-950" href="">

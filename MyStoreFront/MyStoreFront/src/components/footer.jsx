@@ -6,9 +6,9 @@ const Footer = () => {
       <div className="mx-20 mb-2">
         <hr />
       </div>
-      <div className="mx-20 my-4 flex place-items-baseline justify-between">
-          <span className=" col-span-6 sm:col-span-12">© 2023 My-Store-Front</span>
-          <span className=" col-span-6 sm:col-span-12">All rights reserved.</span>
+      <div className="grid grid-cols-1 sm:grid-cols-2 mx-20 my-4">
+          <span className="text-center sm:text-left">© 2023 My-Store-Front</span>
+          <span className="text-center sm:text-right">All rights reserved.</span>
       </div>
     </>
   );
