@@ -1,15 +1,20 @@
 import React from "react";
+import FooterImage from "../assets/images/footer-img.png";
 
 function Footer() {
   return (
-    <footer className="bg-[#0d4b4e] text-white px-8 py-12">
-      <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+    <footer className="bg-[#0d4b4e] text-white ">
+      <div className="grid grid-cols-1 sm:grid-cols-7 items-center gap-8 max-w-6xl">
         {/* Logo & Slogan */}
-        <div>
-          <h2 className="text-2xl font-bold mb-2">tukay</h2>
-          <p className="text-gray-300">
-            No cash, No wahala. Urgent 2k is on the way.
-          </p>
+        <div className="col-span-2">
+          <img src={FooterImage} alt="Footer Image" />
+        </div>
+
+        <div className="text-white col-span-2">
+          <h6>
+            Urgent Tukay - the Notes. No cash, No wahala get our application
+            and deal with Sapa
+          </h6>
         </div>
 
         {/* App */}
@@ -45,8 +50,6 @@ function Footer() {
           </ul>
         </div>
       </div>
-
-      <p className="text-center text-gray-400 mt-12">© {new Date().getFullYear()} Tukay. All rights reserved.</p>
     </footer>
   );
 }

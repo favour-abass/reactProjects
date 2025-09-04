@@ -1,9 +1,9 @@
 import React from "react";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Features from "./components/Features";
-import Promo from "./components/Promo";
-import Notes from "./components/Notes";
+import Hero from "./Hero";
+import Features from "./FeatureList";
+import Promo from "./Promo";
+import Notes from "./Notes";
 import Footer from "./components/Footer";
 
 function App() {

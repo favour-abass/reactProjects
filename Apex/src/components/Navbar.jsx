@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./Button";
 
 const Navbar = () => {
   return (
@@ -30,8 +31,8 @@ const Navbar = () => {
 
       {/* right */}
       <div className="text-sm">
-        <a href="" className="text-black text-decoration-none">Login</a> 
-        <button className="primary text-white px-4 py-2 rounded ms-7">Get Started Free</button>
+        <a href="" className="text-black text-decoration-none me-7">Login</a> 
+        <Button children={"Get Started Free"} />
       </div>
     </nav>
   );
