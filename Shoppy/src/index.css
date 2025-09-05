@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+body {
+  background-color: #fafafa;
+}
+
+.primary{
+  background-color: rgb(3, 201, 215);
+}
+
+.primary-text{
+  color: rgb(3, 201, 215);
+}
