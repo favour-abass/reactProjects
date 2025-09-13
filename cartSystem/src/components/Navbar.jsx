@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useCart } from "../context/CartsContext";
 
 const Navbar = () => {
+  const { cart, totalItems } = useCart();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -22,9 +24,10 @@ const Navbar = () => {
         </Link>
         <Link
           to="/cart"
-          className="transition flex items-center"
+          className="transition flex items-center z-10"
         >
           <FaShoppingCart className="h-6 w-6" />
+          <span className="text-sm absolute right-16 bottom-5 rounded-4xl px-1.5 bg-red-600 z-0">{totalItems}</span>
         </Link>
       </div>
 

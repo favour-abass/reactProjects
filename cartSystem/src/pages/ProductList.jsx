@@ -13,6 +13,9 @@ const ProductList = () => {
     { id: 8, name: "Product 8", price: 800, description: "This is product 8" },
     { id: 9, name: "Product 9", price: 900, description: "This is product 9" },
   ];
+
+  const {addToCart} = useCart();
+
   return (
     <div className="mt-24 px-20">
       <div className="grid grid-cols-3 gap-4 mt-4">
