@@ -1,11 +1,6 @@
-import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./navbar";
-import Footer from "./footer";
-import Hero from "./hero";
-import Greetings from "./greetings";
-import Counter from "./counter";
 import Home from "./pages/Home";
 import About from "./pages/About";
 
@@ -20,13 +15,13 @@ function App() {
   const product5 = "Desk";
   const product6 = "Purse";
   return (
-    <>
+    <BrowserRouter>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
       </Routes>
-    </>
+    </BrowserRouter>
   );
 }
 
