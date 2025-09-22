@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { Star } from "lucide-react";
 
 const MovieList = () => {
   const [movies, setMovies] = useState([]);
@@ -16,8 +17,10 @@ const MovieList = () => {
       const options = {
         method: "GET",
         headers: {
+          // "x-rapidapi-key":
+          //   "e783262941msha79bfdd8efd7815p1cb761jsnbf5ed46e214a", for 1st account
           "x-rapidapi-key":
-            "e783262941msha79bfdd8efd7815p1cb761jsnbf5ed46e214a",
+            "9f7bba2e06msh8f32e483cf6a4bfp150852jsn13ab6c7ad585", // for 2nd account
           "x-rapidapi-host": "movie-database-api1.p.rapidapi.com",
         },
       };
@@ -69,7 +72,7 @@ const MovieList = () => {
         {movies.map((movie) => (
           <div
             key={movie.id}
-            className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white"
+            className="max-w-sm rounded-lg overflow-hidden shadow-lg mb-5 bg-white hover:scale-105 transition-transform duration-300"
           >
             <img
               src={movie.medium_cover_image || movie.large_cover_image}
@@ -77,6 +80,10 @@ const MovieList = () => {
             />
             <div className="p-4">
               <h2 className="text-xl font-bold mb-2">{movie.title}</h2>
+              <p className="flex items-center mb-2">
+                <Star className="w-5 h-5 fill-yellow-400 text-amber-400 me-1.5" />
+                {movie.rating} / 10
+              </p>
               <p className="text-gray-600 text-sm mb-2">
                 {movie.date_uploaded} • date
               </p>
